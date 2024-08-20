@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Cart</title>
+</head>
+<body>
+<h1>Shopping Cart</h1>
+<ul>
+    <li th:each="entry : ${cart}">
+        <span>Product ID: </span><span th:text="${entry.key}"></span> -
+        <span>Quantity: </span><span th:text="${entry.value}"></span>
+    </li>
+</ul>
+<a href="/orders/submit">Submit Order</a>
+</body>
+</html>
